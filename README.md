@@ -16,6 +16,13 @@ Sorting them based on the 'y' coordinate
 Board possible rook moves are the locations from (1,1) to (8,8),
 hence we need to the reject the coordinates that do not belong to this area.
 
+<h3>Queen</h3>
+Queen is the superpower in the chess as it possess the functional movements of a rook and bishop,
+which enables it to cover most of the board than any other piece would given in most of the scenarios.
+
+It can make horizontal, vertical, diagonal(two sides), making it to move in 8 different directions.
+However the maximum steps it can make given in any direction is limited to 7
+
 
 Coordinates to Location
 ord and chr are the methods which converts character to number and number to character respectively.
