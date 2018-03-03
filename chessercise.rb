@@ -11,7 +11,6 @@ rook_moves = [{ x: 1, y: 0, steps: 7},
 
 piece_type = ARGV[1].to_s
 location = ARGV[3].downcase
-puts piece_type, location
 
 unless ['KNIGHT','ROOK','QUEEN'].include?(piece_type.upcase)
   puts 'please enter a valid piece type. KNIGHT or ROOK or QUEEN'
@@ -29,12 +28,24 @@ if x < 1 || y < 1 || y > 8 || x > 8 || location.length!=2
 end
 
 #calculating possible moves of rook
-rook_moves.flat_map do |move|
+rook_all_possible_moves = rook_moves.flat_map do |move|
   (1..move[:steps]).collect do |step|
     new_x = x + (move[:x] * step)
     new_y = y + (move[:y] * step)
-    puts new_x, new_y
+    [new_x, new_y]
   end
+end.sort do |m1, m2|
+  c = (m1[1] <=> m2[1])
+  c == 0 ? (m1[0] <=> m2[0]) : c
 end
+
+rook_board_possible_moves = rook_all_possible_moves.reject { |p| p[0] < 1 || p[1] < 1 || p[0] > 8 || p[1] > 8 }
+
+#printing the moves
+puts rook_board_possible_moves.collect { |m|
+  x = (m[0] + 96).chr
+  y = m[1]
+  "#{x}#{y}"
+}.join(', ')
 
 
