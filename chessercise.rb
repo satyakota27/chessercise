@@ -21,18 +21,20 @@ end
 #setting up location coordinates
 location_coords = location.split(//)
 x = location_coords[0].ord - 96
-y = location_coords[1]
+y = location_coords[1].to_i
 
 if x < 1 || y < 1 || y > 8 || x > 8 || location.length!=2
   puts 'please provide a valid location for the piece'
   exit
 end
 
-def calculate_possible_moves(piece, location)
-  'h1 h2' #sample output
+#calculating possible moves of rook
+rook_moves.flat_map do |move|
+  (1..move[:steps]).collect do |step|
+    new_x = x + (move[:x] * step)
+    new_y = y + (move[:y] * step)
+    puts new_x, new_y
+  end
 end
-
-#output
-puts calculate_possible_moves(piece_type, location)
 
 
