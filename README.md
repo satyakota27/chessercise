@@ -23,6 +23,10 @@ which enables it to cover most of the board than any other piece would given in 
 It can make horizontal, vertical, diagonal(two sides), making it to move in 8 different directions.
 However the maximum steps it can make given in any direction is limited to 7
 
+<h3>Knight</h3>
+Knight is the only chess piece which can jump over other pieces. It can have 8 kinds of moves on a given cartesian space.
+If the Knight is at center(0,0), the possible moves are (1,2), (1,-2), (2,1), (2,-1), (-1,2), (-1,-2), (-2,1), (-2,-1).
+So, it can make 2 moves in a given quadrant space. However, each step it makes is unique and can make only 1 leap at a time.
 
 Coordinates to Location
 ord and chr are the methods which converts character to number and number to character respectively.

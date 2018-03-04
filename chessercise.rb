@@ -17,7 +17,15 @@ moves = {
             { x: 1, y: 1, steps: 7},
             { x: 1, y: -1, steps: 7},
             { x: -1, y: -1, steps: 7},
-            { x: -1, y: 1, steps: 7}]
+            { x: -1, y: 1, steps: 7}],
+    knight: [{ x: 2, y: 1, steps: 1 },
+             { x: 1, y: 2, steps: 1 },
+             { x: 1, y: -2, steps: 1 },
+             { x: 2, y: -1, steps: 1 },
+             { x: -1, y: 2, steps: 1 },
+             { x: -2, y: 1, steps: 1 },
+             { x: -1, y: -2, steps: 1 },
+             { x: -2, y: -1, steps: 1 }]
     }
 piece_type = ARGV[1].to_sym.downcase
 location = ARGV[3].downcase
