@@ -34,10 +34,10 @@ If the Knight is at center(0,0), the possible moves are (1,2), (1,-2), (2,1), (2
 So, it can make 2 moves in a given quadrant space. However, each step it makes is unique and can make only 1 leap at a time.
 
 Coordinates to Location
-<li>ord and chr are the methods which converts character to number and number to character respectively.</li
+<li>ord and chr are the methods which converts character to number and number to character respectively.</li>
 
 
-
+<p>
 Attaching the below test case results:
 $ ruby chessercise_test.rb KNIGHT d2
 b1, f1, b3, f3, c4, e4
@@ -51,4 +51,6 @@ Finished in 0.000605 seconds.
 100% passed
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1652.89 tests/s, 1652.89 assertions/s
+
+</p>
 
