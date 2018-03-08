@@ -1,6 +1,11 @@
 <p> chessercise.rb is a program to calculate moves of a type of chess piece and its location given as input
 </p>
 
+Usage: $ruby chessercise-target.rb -piece 'knight' -location 'd2'
+
+Please provide 2 arguments while running the program
+
+
 <h3>Rook</h3>
 
 <p> A rook is a type of piece which moves horizontal or vertically 7 steps in any direction possible for 
@@ -30,3 +35,20 @@ So, it can make 2 moves in a given quadrant space. However, each step it makes i
 
 Coordinates to Location
 ord and chr are the methods which converts character to number and number to character respectively.
+
+
+
+Attaching the below test case results:
+$ ruby chessercise_test.rb KNIGHT d2
+b1, f1, b3, f3, c4, e4
+Loaded suite chessercise_test
+Started
+.
+
+Finished in 0.000605 seconds.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1 tests, 1 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+100% passed
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1652.89 tests/s, 1652.89 assertions/s
+
